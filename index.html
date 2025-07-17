@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>太陽系3Dモデル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="blocker">
+    <div id="instructions">
+      <p style="font-size: 36px;">クリックして開始</p>
+      <p>
+        W, A, S, D = 移動<br/>
+        スペース = 上昇, SHIFT = 下降<br/>
+        V = 視点切替<br/>
+        マウス = 見回す, ESC = 操作終了
+      </p>
+    </div>
+  </div>
+
+  <div id="planet-sidebar">
+    <h3>惑星コントロール</h3>
+    <div id="planet-controls-container"></div>
+  </div>
+  
+  <div id="controls-panel">
+    <div class="control-group">
+      <label for="move-speed-slider">移動速度: <span id="move-speed-value">1.0</span>x</label>
+      <input type="range" id="move-speed-slider" min="1" max="3" value="1" step="0.1">
+    </div>
+    <div class="control-group">
+      <label for="orbit-speed-slider">全体公転: <span id="orbit-speed-value">1.0</span>x</label>
+      <input type="range" id="orbit-speed-slider" min="0" max="3" value="1" step="0.1">
+    </div>
+    <div class="control-group">
+        <button id="start-button">開始</button>
+        <button id="stop-button">停止</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/libs/fflate.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
